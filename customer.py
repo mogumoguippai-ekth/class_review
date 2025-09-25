@@ -1,6 +1,3 @@
-from inspect import AGEN_CLOSED
-
-
 class Customer:  # クラス名Customer
     # 各問のコードが期待通り動作するように実装
     # pass …将来実装する予定の空の処理
@@ -33,6 +30,10 @@ class Customer:  # クラス名Customer
 
     def info_tab(self):  # C-7 顧客情報をタブ区切りで取得する
         return f"{self.full_name()}\t{self.age}\t{self.entry_fee()}"
+
+
+    def info_pipe(self):  # C-8 顧客情報を|(パイプ)区切りで取得する
+        return f"{self.full_name()}|{self.age}|{self.entry_fee()}"
 
 
 # インスタンス
@@ -78,3 +79,10 @@ print(ken.info_tab())
 print(tom.info_tab())
 print(ieyasu.info_tab())
 print(michelle.info_tab())
+
+
+# C-8. 単一の顧客情報をパイプ区切りで取得できる
+print(ken.info_pipe())
+print(tom.info_pipe())
+print(ieyasu.info_pipe())
+print(michelle.info_pipe())
