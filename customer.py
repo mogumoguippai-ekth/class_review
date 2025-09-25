@@ -17,12 +17,14 @@ class Customer:  # クラス名Customer
     def entry_fee(self):  # 入場料を設定する
         if self.age <= 3:           # C-5 幼児無料(3歳以下)
             return 0
-        elif 4 < self.age < 20:     # こども料金(4歳以上20歳未満)
+        elif 4 < self.age < 20:     # C-5 こども料金(4歳以上20歳未満)
             return 1000
         elif 20 <= self.age < 65:   # おとな料金(20歳以上65歳未満)
             return 1500
-        else:                       # シニア料金(65歳以上)
+        elif 65 <= self.age < 75:   # C-6 シニア料金(65歳以上75歳未満)
             return 1200
+        else:                       # シニア料金2(75歳以上)
+            return 500
 
 
     def info_csv(self):  # 顧客情報をCSV形式で取得する
