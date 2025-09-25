@@ -30,6 +30,11 @@ class Customer:  # クラス名Customer
     def info_csv(self):  # 顧客情報をCSV形式で取得する
         return f"{self.full_name()},{self.age},{self.entry_fee()}"
 
+
+    def info_tab(self):  # C-7 顧客情報をタブ区切りで取得する
+        return f"{self.full_name()}\t{self.age}\t{self.entry_fee()}"
+
+
 # インスタンス
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
 tom = Customer(first_name="Tom", family_name="Ford", age= 57)
@@ -55,7 +60,6 @@ print(tom.entry_fee())
 print(ieyasu.entry_fee())
 
 
-
 # C-4. 単一の顧客情報をCSV形式で取得できる
 print(ken.info_csv())
 print(tom.info_csv())
@@ -67,3 +71,10 @@ print(ken.entry_fee())
 print(tom.entry_fee())
 print(ieyasu.entry_fee())
 print(michelle.entry_fee())
+
+
+# C-7. 単一の顧客情報をタブ区切りで取得できる
+print(ken.info_tab())
+print(tom.info_tab())
+print(ieyasu.info_tab())
+print(michelle.info_tab())
